@@ -10,9 +10,6 @@ datasource db {
   provider = "mongodb"
   url = env("DATABASE_URL")
 }
-"scripts": {
-  "start": "node server.js"
-}
 model User { 
   id    String  @id @default(auto()) @map("_id") @db.ObjectId
   email String  @unique
